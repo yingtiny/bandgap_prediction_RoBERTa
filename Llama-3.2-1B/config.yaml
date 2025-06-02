@@ -1,0 +1,22 @@
+epochs: 25
+batch_size: 12
+notes: 
+gradient_accumulation_steps: 16
+use_mixed_precision: true
+debug: False
+
+  
+
+optim:
+  lr: 1.0e-5
+  scheduler: onecycle  
+
+sch:
+  factor: 0.1
+  patience: 4
+
+paths:
+  data: 
+
+freeze_strategy: 'freeze_first'  # Options: 'freeze_all', 'freeze_all_but_final', 'freeze_all_but_final_3', 'freeze_first', 'no_freeze'
+
